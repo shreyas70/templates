@@ -1,0 +1,35 @@
+{
+    "mcpServers": {
+      "brave-search": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-brave-search"
+        ],
+        "env": {
+          "BRAVE_API_KEY": "****"
+        }
+      },
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "mypath",
+          "mypath2"
+        ]
+      },
+      "google-calendar": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@takumi0706/google-calendar-mcp"
+        ],
+        "env": {
+          "GOOGLE_CLIENT_ID": "****",
+          "GOOGLE_CLIENT_SECRET": "****",
+          "GOOGLE_REDIRECT_URI": "http://localhost:4153/oauth2callback"
+        }
+      }
+    }
+  }

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrahmaSumm - Find the Knowledge Gaps Before They Find You.</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  
+  <!-- Check for print-pdf mode and load the appropriate print styles -->
+  <script>
+    // Determine if the print-pdf query parameter is present
+    var isPrintPDF = window.location.search.match(/print-pdf/gi);
+    
+    // Keep the black theme for both modes but add PDF styles when needed
+    document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css" id="theme">');
+    
+    // Add PDF-specific styles if in print mode
+    if (isPrintPDF) {
+      document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/css/print/pdf.css">');
+    }
+  </script>
+  
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="reveal">
+    <!-- Logo in bottom left corner for non-title slides -->
+    <img src="images/logo1.png" class="logo-footer" alt="Brahmasumm Logo">
+    
+    <div class="slides">
+      <!-- Title Slide -->
+      <section id="title-slide" class="title-slide">
+        <img src="images/logo1.png" class="title-logo" alt="Brahmasumm Logo">
+        <h3 style="margin-bottom: 40px; color: #e9c4ff;">Find the Knowledge Gaps Before They Find You</h3>
+       
+        <p style="font-size: 0.8em; opacity: 0.8;">Balaji Viswanathan, Founder & CEO, Brahmasumm.com</p>
+        <p style="font-size: 0.8em; opacity: 0.8;">San Francisco, March 2025</p>
+      </section>
+
+      <!-- Elevator Pitch -->
+      <section>
+        <h2>The Engineering Knowledge Challenge</h2>
+        <div class="elevator-pitch">
+          <p>Engineering innovation is hard. Your teams are juggling complex projects while <strong>critical IP sits trapped in millions of documents</strong> across fragmented systems.</p>
+          <p class="fragment highlight-current-blue">Engineers waste countless hours searching for existing solutions, often <strong>rebuilding what's already been created</strong>, dragging down time-to-market.</p>
+          <p class="fragment highlight-current-blue">For engineering leaders, it's nearly impossible to know if teams have access to all available knowledge, if they're <strong>leveraging existing IP effectively</strong>, or if tribal knowledge is being captured and shared.</p>
+          <p class="fragment highlight-current-blue">This leads to <strong>repeated mistakes, slower innovation cycles, and missed product deadlines.</strong></p>
+        </div>
+      </section>
+
+            <!-- Customer Pain Points -->
+            <section>
+              <h2>Customer Pain Points</h2>
+              
+            <div style="text-align: center;">
+              <img src="images/knowledge_fragmentation.png" alt="Customer Pain Points" style="width: 800px; "/>
+            
+              <ul>
+                <li><strong>Fragmented Knowledge</strong>: Expensive and inefficient manual search across systems</li>
+                <li><strong>Wasted Resources</strong>: High risk of recreating existing solutions due to poor discovery</li>
+                <li><strong>Knowledge Loss</strong>: Erosion of tribal knowledge and institutional memory</li>
+                <li><strong>Compliance Challenges</strong>: Difficulty tracking and reporting on ESG requirements</li>
+              </ul>
+            </div>
+            </section>
+      <!-- Introducing Brahmasumm -->
+      <section>
+        <h2>Solution: Knowledge Transformation</h2>
+        <div class="highlight-box">
+          <p><strong>Unlocking Engineering Excellence Through Knowledge Transformation</strong></p>
+        </div>
+        <p>Brahmasumm is an AI-powered engineering knowledge transformation platform that unlocks intellectual property trapped in millions of unstructured documents across PLM systems.</p>
+        <p class="fragment highlight-current-blue"><strong>We don't just find answers to questions you know to ask — we reveal the critical questions your organization isn't asking.</strong></p>
+      </section>
+
+
+
+      <!-- Technical Architecture -->
+      <section>
+        <h2>Brahmasumm Architecture</h2>
+        <div class="architecture-container">
+          <!-- Engineering Data Section -->
+          <div class="arch-section data fragment fade-in" data-fragment-index="1" style="margin-left: 30px;">
+            <h4>Engineering Data</h4>
+            <div class="arch-component">PLM Systems</div>
+            <div class="arch-component">CAD/CAM</div>
+            <div class="arch-component">ERP Data</div>
+            <div class="arch-component">Documents</div>
+          </div>
+          
+          <!-- Arrow 1 -->
+          <div class="arch-arrow fragment fade-in" data-fragment-index="2" style="top: 220px; left: 234px;"></div>
+          
+          <!-- Ingestion Engine Section -->
+          <div class="arch-section ingest fragment fade-in" data-fragment-index="2" style="margin-left: 30px;">
+            <h4>Ingestion Engine</h4>
+            <div class="arch-component">Smart Layout<span>Extraction</span></div>
+            <div class="arch-component">Smart Chunking</div>
+            <div class="arch-component">Metadata<span>Extraction</span></div>
+          </div>
+          
+          <!-- Arrow 2 -->
+          <div class="arch-arrow fragment fade-in" data-fragment-index="3" style="top: 220px; left: 450px;"></div>
+          
+          <!-- AWS Infrastructure Section -->
+          <div class="arch-section infra fragment fade-in" data-fragment-index="3" style="margin-left: 30px;">
+            <h4>Transform Data</h4>
+            <div class="arch-component">Document Lake</div>
+            <div class="arch-component">Knowledge Graph</div>
+            <div class="arch-component">Vector Store</div>
+          </div>
+          
+          <!-- Arrow 3 -->
+          <div class="arch-arrow fragment fade-in" data-fragment-index="4" style="top: 220px; left: 674px;"></div>
+          
+          <!-- Knowledge Analysis Section -->
+          <div class="arch-section analysis fragment fade-in" data-fragment-index="4" style="margin-left: 30px;">
+            <h4>Knowledge Analysis</h4>
+            <div class="arch-component">Embeddings<span>Generation</span></div>
+            <div class="arch-component">Cluster<span>Analysis</span></div>
+            <div class="arch-component">Deep<span>Summarization</span></div>
+          </div>
+          
+          <!-- Arrow 4 -->
+          <div class="arch-arrow fragment fade-in" data-fragment-index="5" style="top: 220px; left: 896px;"></div>
+          
+          <!-- Applications Section -->
+          <div class="arch-section apps fragment fade-in" data-fragment-index="5" style="margin-left: 30px;">
+            <h4>Apps</h4>
+            <div class="arch-component">Deep Search</div>
+            <div class="arch-component">Deep Chat</div>
+            <div class="arch-component">Gap Analysis</div>
+            <div class="arch-component">Dashboards</div>
+            <div class="arch-component">Org chat memory</div>
+          </div>
+          
+          <!-- Bidirectional Arrows Down to Security & Compliance -->
+          <div class="bidir-arrow-down arrow-data fragment fade-in" data-fragment-index="6" style="margin-left: 30px;"></div>
+          <div class="bidir-arrow-down arrow-ingest fragment fade-in" data-fragment-index="6" style="margin-left: 30px;"></div>
+          <div class="bidir-arrow-down arrow-infra fragment fade-in" data-fragment-index="6" style="margin-left: 30px;"></div>
+          <div class="bidir-arrow-down arrow-analysis fragment fade-in" data-fragment-index="6" style="margin-left: 30px;"></div>
+          <div class="bidir-arrow-down arrow-apps fragment fade-in" data-fragment-index="6" style="margin-left: 30px;"></div>
+          
+          <!-- Security, Compliance & Integration Section -->
+          <div class="arch-section-wide security-compliance fragment fade-in" data-fragment-index="6" style="margin-left: 30px;">
+            <h4>Security, Compliance & Integrations</h4>
+            <div class="security-compliance-grid">
+              <div class="sec-comp-component">
+                <div class="sec-comp-text">Role-Based Access Control</div>
+              </div>
+              <div class="sec-comp-component">
+                <div class="sec-comp-text">Enterprise SSO</div>
+              </div>
+              <div class="sec-comp-component">
+                <div class="sec-comp-text">Audit Logging</div>
+              </div>
+              <div class="sec-comp-component">
+                <div class="sec-comp-text">Compliance Reporting</div>
+              </div>
+              <div class="sec-comp-component">
+                <div class="sec-comp-text">PLM System Connectors</div>
+              </div>
+              <div class="sec-comp-component">
+                <div class="sec-comp-text">API Gateway</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Value Proposition & Business Benefits Combined -->
+      <section>
+        <h2>Value & Business Impact</h2>
+        <div class="highlight-box">
+          <p><strong>Transform Engineering Knowledge into Measurable Business Advantage</strong></p>
+        </div>
+        
+        <div class="combined-benefits-container">
+          <div class="combined-benefit-item fragment fade-in" data-fragment-index="1">
+            <div class="combined-icon time-to-market">⏱️</div>
+            <h3>Faster Time-to-Market</h3>
+            <div class="benefit-metric">40%</div>
+            <p>Reduction in product development cycles</p>
+            <ul class="combined-details">
+              <li>Rapid knowledge discovery and reuse</li>
+              <li>Accelerated design validation</li>
+            </ul>
+          </div>
+          
+          <div class="combined-benefit-item fragment fade-in" data-fragment-index="2">
+            <div class="combined-icon ip-reuse">🔄</div>
+            <h3>Leverage your IP</h3>
+            <div class="benefit-metric">65%</div>
+            <p>Increase in IP reuse across projects</p>
+            <ul class="combined-details">
+              <li>Cross-project solution discovery</li>
+              <li>Reduced reinvention of solutions</li>
+            </ul>
+          </div>
+          
+          <div class="combined-benefit-item fragment fade-in" data-fragment-index="3">
+            <div class="combined-icon cost-reduction">💰</div>
+            <h3>Cost Efficiency</h3>
+            <div class="benefit-metric">95%</div>
+            <p>Lower TCO than comparable solutions</p>
+            <ul class="combined-details">
+              <li>Single GPU deployment</li>
+              <li>Reduced infrastructure needs</li>
+            </ul>
+          </div>
+          
+          <div class="combined-benefit-item fragment fade-in" data-fragment-index="4">
+            <div class="combined-icon tribal-knowledge">🧠</div>
+            <h3>Knowledge Preservation</h3>
+            <div class="benefit-metric">80%</div>
+            <p>Capture of tribal knowledge</p>
+            <ul class="combined-details">
+              <li>Institutional memory protection</li>
+              <li>Expertise mapping and transfer</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Differentiation -->
+      <section>
+        <h2>Key Differentiation: Scale & Performance</h2>
+        <br/>
+        <div class="highlight-box">
+          <p><strong>Handling 50M+ documents at 95% lower TCO than competitors</strong></p>
+        </div>
+        <br/>
+        <table>
+          <thead>
+            <tr>
+              <th>Solution</th>
+              <th>Document Scale</th>
+              <th>Infrastructure Requirements</th>
+              <th>Enterprise Integration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Legacy PLM Vendors</td>
+              <td>~100K</td>
+              <td>Heavy server requirements</td>
+              <td>Limited to vendor ecosystem</td>
+            </tr>
+            <tr>
+              <td>Enterprise Search</td>
+              <td>~1M</td>
+              <td>Cloud-dependent</td>
+              <td>Limited PLM integration</td>
+            </tr>
+            <tr>
+              <td>Generic AI Solutions</td>
+              <td>~5M</td>
+              <td>Multiple GPUs required</td>
+              <td>Limited engineering context</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Brahmasumm</strong></td>
+              <td><strong>50M+</strong></td>
+              <td><strong>Single GPU deployment</strong></td>
+              <td><strong>Native PLM integration</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+
+
+      <!-- User Workflow - Simplified version -->
+      <section>
+        <h2>User Workflow</h2>
+        
+        <!-- Main Workflow Diagram -->
+        <div class="workflow-diagram">
+          <!-- Engineer -->
+          <div class="workflow-step engineer">
+            <div class="step-circle">
+              <h3>Engineer<br>Needs Info</h3>
+            </div>
+            <div class="step-details">
+              <ul>
+                <li>Technical questions</li>
+                <li>Design challenges</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Right Arrow -->
+          <div class="workflow-arrow fragment fade-in" data-fragment-index="1">→</div>
+          
+          <!-- Deep Search -->
+          <div class="workflow-step search fragment fade-in" data-fragment-index="1">
+            <div class="step-circle">
+              <h3>Deep Search<br></h3>
+            </div>
+            <div class="step-details">
+              <ul>
+                <li>Semantic search</li>
+                <li>Vector similarity</li>
+                <li>Hybrid retrieval</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Right Arrow -->
+          <div class="workflow-arrow fragment fade-in" data-fragment-index="2">→</div>
+          
+          <!-- Knowledge Analysis -->
+          <div class="workflow-step analysis fragment fade-in" data-fragment-index="2">
+            <div class="step-circle">
+              <h3>Knowledge Gap Analysis</h3>
+            </div>
+            <div class="step-details">
+              <ul>
+                <li>Understanding the context</li>
+                <li>Deep summaries</li>
+                <li>Contradiction check</li>
+                <li>Cluster analysis</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Right Arrow -->
+          <div class="workflow-arrow fragment fade-in" data-fragment-index="3">→</div>
+          
+          <!-- Apply -->
+          <div class="workflow-step apply fragment fade-in" data-fragment-index="3">
+            <div class="step-circle">
+              <h3>Apply & Integrate</h3>
+            </div>
+            <div class="step-details">
+              <ul>
+                <li>Design reuse</li>
+                <li>Expert connection</li>
+                <li>PLM integration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Deep Cluster Analysis -->
+      <section>
+        <h2>Unique Capability: Hierarchical Knowledge Gap Identification</h2>
+        
+        <div class="cluster-analysis-container">
+          <!-- Traditional Approach Section -->
+          <div class="cluster-section traditional fragment fade-in" data-fragment-index="1">
+            <h4>Traditional Approach</h4>
+            <div class="cluster-component">Question-Based<span>Limited by what you know to ask</span></div>
+            <div class="cluster-component">Direct Matching<span>Misses semantic connections</span></div>
+            <div class="cluster-component">Single Document<span>No cross-document context</span></div>
+          </div>
+          
+
+          
+          <!-- Brahmasumm Differentiator Section -->
+          <div class="cluster-section differentiator fragment fade-in" data-fragment-index="2">
+            <h4>Brahmasumm Differentiator</h4>
+            <div class="cluster-component">Reverse Search<span>Finding unknown unknowns</span></div>
+            <div class="cluster-component">Gap Identification<span>What's missing in your knowledge</span></div>
+            <div class="cluster-component">Deep Connectivity<span>Cross-document relationships</span></div>
+          </div>
+          
+
+          
+          <!-- Results Section -->
+          <div class="cluster-section results fragment fade-in" data-fragment-index="3">
+            <h4>Key Results</h4>
+            <div class="cluster-component">Semantic Anomaly Detection<span>Find outliers and contradictions</span></div>
+            <div class="cluster-component">Automated Knowledge Linkage<span>Graph-based relationship mining</span></div>
+            <div class="cluster-component">Engineering Knowledge Maps<span>Specialized for technical contexts</span></div>
+          </div>
+          
+
+          
+          <!-- Business Value Section -->
+          <div class="cluster-section value fragment fade-in" data-fragment-index="4">
+            <h4>Business Value</h4>
+            <div class="cluster-component">Prevent Reinvention<span>65% increase in IP reuse</span></div>
+            <div class="cluster-component">Knowledge Capture<span>80% of tribal knowledge preserved</span></div>
+            <div class="cluster-component">Design Efficiency<span>40% faster product development</span></div>
+          </div>
+          
+        </div>
+      </section>
+
+
+      <!-- Engineering ROI Metrics -->
+      <section>
+        <h2>Engineering ROI Metrics</h2>
+        <div class="highlight-box">
+          <p><strong>Real-world impact for engineering organizations</strong></p>
+        </div>
+        <div style="text-align: center;">
+        <ul class="impact-metrics">
+          <li><strong>95% Lower TCO</strong> compared to generic AI document solutions</li>
+          <li><strong>75% Reduction</strong> in time spent searching for information</li>
+          <li><strong>40% Faster</strong> product development cycles</li>
+          <li><strong>65% Increase</strong> in IP reuse across projects</li>
+          <li><strong>50% Improvement</strong> in design efficiency through knowledge access</li>
+        </ul>
+        </div>
+      </section>
+
+      <!-- Success Stories -->
+      <section>
+        <h2>Success Stories</h2>
+        <div class="success-story">
+          <h3>Lawrence Berkeley National Laboratory (US Federal)</h3>
+          <p>Premier research facility with Nobel laureates validates our capability in handling complex engineering data</p>
+        </div>
+        <div class="success-story">
+          <h3>Fleetguard (Atmus Filtrum NYSE: ATMU)</h3>
+          <p>Strategic division of a public company demonstrates value in manufacturing context</p>
+        </div>
+      </section>
+
+      <!-- Market Opportunity -->
+      <section>
+        <h2>Market Opportunity</h2>
+        <div class="highlight-box">
+          <p><strong>Targeting a massive engineering knowledge management market</strong></p>
+        </div>
+        <div class="combined-benefits-container">
+          <div class="combined-benefit-item fragment fade-in" data-fragment-index="1">
+            <div class="combined-icon time-to-market">🚀</div>
+            <h3>TAM</h3>
+            <div class="benefit-metric">$18B</div>
+            <p>Total addressable market for engineering knowledge solutions</p>
+            <ul class="combined-details">
+              <li>Manufacturing sector dominates knowledge system spending</li>
+              <li>Engineering organizations increasingly focused on IP leverage</li>
+            </ul>
+          </div>
+          
+          <div class="combined-benefit-item fragment fade-in" data-fragment-index="2">
+            <div class="combined-icon ip-reuse">📈</div>
+            <h3>Growth</h3>
+            <div class="benefit-metric">37%</div>
+            <p>CAGR in engineering AI knowledge platforms</p>
+            <ul class="combined-details">
+              <li>Accelerating demand for specialized engineering AI</li>
+              <li>Growing focus on capturing tribal knowledge as workforce changes</li>
+            </ul>
+          </div>
+          
+          <div class="combined-benefit-item fragment fade-in" data-fragment-index="3">
+            <div class="combined-icon cost-reduction">🏭</div>
+            <h3>Industries</h3>
+            <div class="benefit-metric">5+</div>
+            <p>Key vertical markets with immediate demand</p>
+            <ul class="combined-details">
+              <li>Aerospace & Defense</li>
+              <li>Automotive</li>
+              <li>Industrial Manufacturing</li>
+              <li>Energy & Utilities</li>
+              <li>Medical Devices</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Competitive Landscape -->
+      <section>
+        <h2>Competitive Landscape</h2>
+        <div class="highlight-box">
+          <p><strong>Uniquely positioned at the intersection of PLM, AI, and knowledge management</strong></p>
+        </div>
+        <br/>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Example Companies</th>
+              <th>Limitations</th>
+              <th>Our Advantage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Traditional PLM</td>
+              <td>PTC, Siemens</td>
+              <td>Limited document analysis, poor search capabilities</td>
+              <td>Native integration with superior AI analysis</td>
+            </tr>
+            <tr>
+              <td>Generic RAG</td>
+              <td>Perplexity, Glean</td>
+              <td>Not designed for engineering documents and contexts</td>
+              <td>Engineering-specific document processing</td>
+            </tr>
+            <tr>
+              <td>Enterprise Search</td>
+              <td>Elastic, Algolia</td>
+              <td>Keyword focus, limited semantic understanding</td>
+              <td>Knowledge gap analysis, not just search</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Brahmasumm</strong></td>
+              <td><strong>Unique Position</strong></td>
+              <td><strong>No direct competitors</strong></td>
+              <td><strong>First mover in engineering knowledge gap analysis</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Fundraising Round -->
+      <section>
+        <h2>Fundraising Round</h2>
+        <div class="highlight-box">
+          <p><strong>Seed round to accelerate growth and customer acquisition</strong></p>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Funding Detail</th>
+              <th>Amount</th>
+              <th>Use of Funds</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Seed Round</td>
+              <td>$700K</td>
+              <td>Engineering team expansion</td>
+            </tr>
+            <tr>
+              <td>Valuation</td>
+              <td>$3.5M</td>
+              <td>Enterprise integration development</td>
+            </tr>
+            <tr>
+              <td>Timeline</td>
+              <td>Q2 2025</td>
+              <td>Sales and marketing acceleration</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Time to Profitability</strong></td>
+              <td><strong>18 months</strong></td>
+              <td><strong>Customer acquisition & scaling</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div style="text-align: center; margin-top: 20px;">
+          <p>Looking for strategic partners with expertise in enterprise SaaS, manufacturing technology, or engineering platforms</p>
+        </div>
+      </section>
+
+      <!-- Our Team -->
+      <section>
+        <h2>Our Team</h2>
+        <ul class="team-list">
+          <li><strong>Dr. Balaji Viswanathan, CEO</strong> - Deep product & AI expertise with MS/PhD in CS and Babson MBA</li>
+          <li><strong>Mahalakshmi Radhakrushnun, CBO</strong> - Scaled Mitra Robot from concept to market success</li>
+          <li><strong>Sreenivas AC, VP Engineering</strong> - Ex-Google/Apple senior engineer with deep systems expertise</li>
+        </ul>
+        <p>Our team combines deep technical expertise, successful startup experience, and proven manufacturing knowledge.</p>
+      </section>
+
+      <!-- Next Steps -->
+      <section>
+        <h2>Next Steps</h2>
+        <div class="highlight-box">
+          <p><strong>Transforming your engineering knowledge into a competitive advantage</strong></p>
+        </div>
+        <ul class="next-steps">
+          <li><strong>Discovery Workshop</strong>: Analyze your current PLM ecosystem and knowledge challenges</li>
+          <li><strong>Proof of Concept</strong>: Implement Brahmasumm on a subset of your engineering documents</li>
+          <li><strong>Enterprise Deployment</strong>: Scale to your full document collection with customized integration</li>
+          <li><strong>Continuous Optimization</strong>: Ongoing enhancement of knowledge discovery and utilization</li>
+        </ul>
+      </section>
+
+      <!-- Build best-in-class products -->
+      <section>
+        <h2>Build best-in-class products faster</h2>
+        <div class="highlight-box">
+          <p><strong>Transform your fragmented engineering knowledge into your greatest competitive advantage</strong></p>
+        </div>
+        <p>Contact: <a href="mailto:balaji@mitrarobot.com">balaji@mitrarobot.com</a></p>
+        <p>Website: <a href="https://brahmasumm.com" target="_blank">brahmasumm.com</a></p>
+      </section>
+
+      <!-- Thank You -->
+      <section class="final-slide">
+        <h1>Thank You</h1>
+        <p><em>Questions and Discussion</em></p>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+    // Wait for DOM to be ready
+    window.addEventListener('load', function() {
+      // Check if we're in print-pdf mode
+      var isPrintPDF = window.location.search.match(/print-pdf/gi);
+      
+      // Auto-trigger the print dialog after a delay when in print-pdf mode
+      if (isPrintPDF) {
+        setTimeout(function() {
+          window.print();
+        }, 1500); // Delay to ensure everything is rendered
+      }
+      
+      // Initialize reveal with conditional settings based on print mode
+      let deck = new Reveal({
+        hash: true,
+        slideNumber: true,
+        transition: isPrintPDF ? 'none' : 'slide', 
+        transitionSpeed: 'fast',
+        controls: true,
+        progress: true,
+        center: true,
+        width: 1400,
+        height: 900,
+        margin: 0,
+        marginLeft: 0,
+        marginRight: 0,
+        viewDistance: 3,
+        showNotes: false,
+        backgroundTransition: isPrintPDF ? 'none' : 'fade',
+        controlsBackArrows: 'faded',
+        controlsLayout: 'bottom-right',
+        // Configure Fragments
+        fragments: true,
+        fragmentInURL: true,
+        // PDF export options
+        pdfMaxPagesPerSlide: 1,
+        pdfSeparateFragments: false,
+        showNotes: false,
+        pdf: {
+          margin: 0,
+          size: [1200, 700],
+          format: 'Letter'
+        },
+        // Make sure all fragments are visible in print mode
+        dependencies: [
+          { src: 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/zoom/zoom.js', async: true }
+        ]
+      });
+      
+      // Initialize the presentation
+      deck.initialize();
+      
+      // Add PDF export button
+      const pdfButton = document.createElement('div');
+      pdfButton.innerHTML = '📄';
+      pdfButton.className = 'pdf-export-button';
+      pdfButton.title = 'Export to PDF (Print with Ctrl+P)';
+      pdfButton.style.position = 'fixed';
+      pdfButton.style.zIndex = '40';
+      pdfButton.style.bottom = '20px';
+      pdfButton.style.right = '170px';
+      pdfButton.style.width = '38px';
+      pdfButton.style.height = '38px';
+      pdfButton.style.backgroundColor = 'rgba(187, 134, 252, 0.7)';
+      pdfButton.style.borderRadius = '50%';
+      pdfButton.style.display = 'flex';
+      pdfButton.style.alignItems = 'center';
+      pdfButton.style.justifyContent = 'center';
+      pdfButton.style.fontSize = '18px';
+      pdfButton.style.cursor = 'pointer';
+      pdfButton.style.transition = 'all 0.3s ease';
+      pdfButton.style.boxShadow = '0 2px 10px rgba(187, 134, 252, 0.3)';
+      pdfButton.addEventListener('mouseenter', function() {
+        pdfButton.style.backgroundColor = 'rgba(187, 134, 252, 0.9)';
+        pdfButton.style.transform = 'scale(1.05)';
+      });
+      pdfButton.addEventListener('mouseleave', function() {
+        pdfButton.style.backgroundColor = 'rgba(187, 134, 252, 0.7)';
+        pdfButton.style.transform = 'scale(1)';
+      });
+      pdfButton.addEventListener('click', function() {
+        // Always redirect to print-pdf mode for consistent behavior
+        const currentUrl = window.location.href.split('?')[0];
+        window.location.href = currentUrl + '?print-pdf';
+      });
+      document.body.appendChild(pdfButton);
+    });
+  </script>
+  
+  <style>
+  @media print {
+    .controls, .progress, .dark-mode-toggle, .fullscreen-toggle, .speaker-view-toggle, .pdf-export-button {
+      display: none !important;
+    }
+    
+    .logo-footer {
+      opacity: 1 !important;
+    }
+    
+    /* Keep original background colors */
+    html, body {
+      background: #1a1a2e !important;
+      background-color: #1a1a2e !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    
+    .reveal {
+      background-color: #1a1a2e !important;
+      color: #f0f0f0 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      color: #bb86fc !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    
+    /* Fix for title slide centering in print mode */
+    .title-slide, .final-slide {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      height: 100vh !important;
+      margin-top: 0 !important;
+      position: relative !important;
+      top: 0 !important;
+      transform: none !important;
+    }
+    
+    /* Ensure proper spacing for all slides in print mode */
+    .reveal .slides > section {
+      padding-top: 0 !important;
+      transform: none !important;
+      height: 100vh !important;
+      min-height: 100vh !important;
+      page-break-after: always !important;
+      page-break-before: avoid !important;
+    }
+    
+    /* Keep original element colors */
+    .elevator-pitch, .highlight-box, .benefit-item, .combined-benefit-item,
+    .workflow-step, .cluster-section, .arch-section, .arch-section-wide {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      box-shadow: none !important;
+    }
+    
+    /* Show all fragments */
+    .fragment {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    
+    /* Make sure tables print properly */
+    table, th, td {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    
+    /* Ensure backgrounds print */
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      color-adjust: exact !important;
+    }
+  }
+  </style>
+</body>
+</html>
