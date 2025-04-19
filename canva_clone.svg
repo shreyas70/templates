@@ -1,0 +1,211 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" font-family="'Poppins', Arial, sans-serif" fill="#121212">
+
+  <defs>
+    <!-- Canva Logo Gradient -->
+    <linearGradient id="canvaLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C4CC" />
+      <stop offset="100%" stop-color="#8D4BFF" />
+    </linearGradient>
+
+    <!-- Headline "design" Gradient -->
+    <linearGradient id="designGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+       <stop offset="0%" stop-color="#00C4CC" />
+       <stop offset="100%" stop-color="#8D4BFF" />
+    </linearGradient>
+
+    <!-- Colors -->
+    <color id="canvaPurple">#8D4BFF</color>
+    <color id="buttonText">#FFFFFF</color>
+    <color id="bodyText">#333333</color>
+    <color id="subtleGray">#F1F3F4</color>
+    <color id="darkGray">#525252</color>
+    <color id="white">#FFFFFF</color>
+    <color id="black">#000000</color>
+
+    <!-- Card Colors -->
+    <color id="docsColor">#1ABC9C</color>
+    <color id="whiteboardsColor">#2ECC71</color>
+    <color id="presentationsColor">#F39C12</color>
+    <color id="socialColor">#E74C3C</color>
+    <color id="videosColor">#BE4BFF</color>
+    <color id="printsColor">#9B59B6</color>
+    <color id="websitesColor">#3498DB</color>
+
+    <!-- Icons -->
+    <symbol id="icon-down-arrow" viewBox="0 0 24 24">
+      <path d="M7 10l5 5 5-5" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-help" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M9.1 9a3 3 0 0 1 5.8 1c0 1.5-1.7 2.3-2.4 3M12 17.5h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-doc" viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 9H7v-2h6v2zm3-4H7V5h9v2zm-3 7H7v-2h6v2z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-whiteboard" viewBox="0 0 24 24">
+      <path d="M5 3H3v18h18V3H5zm14 2v14H5V5h14zm-8 2H7v8h4V7zm6 0h-4v8h4V7z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-presentation" viewBox="0 0 24 24">
+      <path d="M4 3h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v9h14V5H5zm4 2h6v1H9V7zm0 3h6v1H9v-1z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-social" viewBox="0 0 24 24">
+      <path d="M16.5 3c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-10 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm0 10c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm10 0c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-videos" viewBox="0 0 24 24">
+      <path d="M17 10.5V7c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-3.5l4 4v-11l-4 4z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-prints" viewBox="0 0 24 24">
+      <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM6 18H4v-4h2v4zm13-2H5v-4c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v4zm-2-7H7v-2h10v2z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="icon-websites" viewBox="0 0 24 24">
+      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v10z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="arrow-left" viewBox="0 0 24 24">
+      <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="arrow-right" viewBox="0 0 24 24">
+      <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <g id="header">
+    <!-- Logo -->
+    <text x="40" y="50" font-size="30" font-weight="bold" fill="url(#canvaLogoGradient)">Canva</text>
+
+    <!-- Navigation -->
+    <g font-size="14" fill="#333333" transform="translate(150 48)">
+      <text x="0" y="0">Design spotlight</text>
+      <svg x="115" y="-10" width="24" height="24"><use href="#icon-down-arrow" fill="#525252"/></svg>
+      <text x="160" y="0">Business</text>
+      <svg x="225" y="-10" width="24" height="24"><use href="#icon-down-arrow" fill="#525252"/></svg>
+      <text x="270" y="0">Education</text>
+      <svg x="340" y="-10" width="24" height="24"><use href="#icon-down-arrow" fill="#525252"/></svg>
+      <text x="385" y="0">Plans and pricing</text>
+      <svg x="505" y="-10" width="24" height="24"><use href="#icon-down-arrow" fill="#525252"/></svg>
+      <text x="550" y="0">Learn</text>
+      <svg x="595" y="-10" width="24" height="24"><use href="#icon-down-arrow" fill="#525252"/></svg>
+    </g>
+
+    <!-- Right Controls -->
+    <g transform="translate(1150 33)">
+      <svg width="24" height="24"><use href="#icon-help" stroke="#525252"/></svg>
+      <rect x="60" y="0" width="90" height="40" rx="8" fill="#FFFFFF" stroke="#DCDCDC"/>
+      <text x="105" y="26" text-anchor="middle" font-size="14" font-weight="600" fill="#333333">Log in</text>
+      <rect x="170" y="0" width="100" height="40" rx="8" fill="#8D4BFF"/>
+      <text x="220" y="26" text-anchor="middle" font-size="14" font-weight="600" fill="#FFFFFF">Sign up</text>
+    </g>
+    <line x1="0" y1="85" x2="1440" y2="85" stroke="#F1F3F4" stroke-width="1"/>
+  </g>
+
+  <!-- Hero Section -->
+  <g id="hero" text-anchor="middle" transform="translate(720 0)">
+    <text y="200" font-size="80" font-weight="600" fill="#000000">What will you</text>
+    <text y="300" font-size="80" font-weight="600" fill="url(#designGradient)">code </text>
+    <text x="240" y="300" font-size="80" font-weight="600" fill="#000000">today?</text>
+    <text y="360" font-size="18" fill="#525252">With Canva you can design, generate, print, and work on anything.</text>
+    <rect y="410" x="-110" width="220" height="50" rx="8" fill="#8D4BFF"/>
+    <text y="442" font-size="16" font-weight="600" fill="#FFFFFF">Start designing</text>
+  </g>
+
+  <!-- Category Cards Section -->
+  <g id="category-cards" transform="translate(0 520)">
+    <!-- Left Arrow -->
+    <circle cx="25" cy="115" r="20" fill="#FFFFFF" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.1))"/>
+    <svg x="13" y="103" width="24" height="24"><use href="#arrow-left" stroke="#525252"/></svg>
+
+    <!-- Cards -->
+    <g transform="translate(70 0)">
+        <!-- Card 1: Docs -->
+        <g>
+            <rect width="200" height="230" rx="16" fill="#1ABC9C"/>
+            <rect x="10" y="40" width="180" height="180" rx="8" fill="rgba(255,255,255,0.2)"/>
+            <svg x="15" y="10" width="24" height="24"><use href="#icon-doc" fill="#FFFFFF"/></svg>
+            <text x="50" y="28" font-size="16" font-weight="600" fill="#FFFFFF">Docs</text>
+            <path d="M40 180 v-50 l30 -20 v50 l-30 20 z M75 160 v-50 l30 -20 v50 l-30 20 z M110 140 v-50 l30 -20 v50 l-30 20 z M145 120 v-50 l30 -20 v50 l-30 20 z" fill="#FFFFFF" opacity="0.7"/>
+            <text x="30" y="70" fill="#FFF" font-size="14">Research</text>
+            <text x="30" y="90" fill="#FFF" font-size="14">Doc</text>
+        </g>
+
+        <!-- Card 2: Whiteboards -->
+        <g transform="translate(220 0)">
+            <rect width="200" height="230" rx="16" fill="#2ECC71"/>
+            <rect x="10" y="40" width="180" height="180" rx="8" fill="rgba(255,255,255,0.2)"/>
+            <svg x="15" y="10" width="24" height="24"><use href="#icon-whiteboard" fill="#FFFFFF"/></svg>
+            <text x="50" y="28" font-size="16" font-weight="600" fill="#FFFFFF">Whiteboards</text>
+            <circle cx="80" cy="150" r="30" fill="#FFF" opacity="0.7"/>
+            <rect x="110" y="120" width="60" height="60" fill="#FFF" opacity="0.5" rx="5"/>
+            <text x="120" y="100" font-size="14" fill="#FFF">Ideas</text>
+        </g>
+
+        <!-- Card 3: Presentations -->
+        <g transform="translate(440 0)">
+            <rect width="200" height="230" rx="16" fill="#F39C12"/>
+            <rect x="10" y="40" width="180" height="180" rx="8" fill="rgba(255,255,255,0.2)"/>
+            <svg x="15" y="10" width="24" height="24"><use href="#icon-presentation" fill="#FFFFFF"/></svg>
+            <text x="50" y="28" font-size="16" font-weight="600" fill="#FFFFFF">Presentations</text>
+            <rect x="30" y="70" width="140" height="100" fill="#FFF" opacity="0.7" rx="5"/>
+            <text x="40" y="120" font-size="18" fill="#F39C12">Pitch Deck</text>
+        </g>
+
+        <!-- Card 4: Social -->
+        <g transform="translate(660 0)">
+            <rect width="200" height="230" rx="16" fill="#E74C3C"/>
+            <rect x="10" y="40" width="180" height="180" rx="8" fill="rgba(255,255,255,0.2)"/>
+            <svg x="15" y="10" width="24" height="24"><use href="#icon-social" fill="#FFFFFF"/></svg>
+            <text x="50" y="28" font-size="16" font-weight="600" fill="#FFFFFF">Social</text>
+            <rect x="60" y="60" width="80" height="140" fill="#FFF" opacity="0.7" rx="5"/>
+            <text x="70" y="130" font-size="18" fill="#E74C3C">NEW</text>
+        </g>
+
+        <!-- Card 5: Videos -->
+        <g transform="translate(880 0)">
+            <rect width="200" height="230" rx="16" fill="#BE4BFF"/>
+            <rect x="10" y="40" width="180" height="180" rx="8" fill="rgba(255,255,255,0.2)"/>
+            <svg x="15" y="10" width="24" height="24"><use href="#icon-videos" fill="#FFFFFF"/></svg>
+            <text x="50" y="28" font-size="16" font-weight="600" fill="#FFFFFF">Videos</text>
+            <rect x="30" y="70" width="140" height="80" fill="#FFF" opacity="0.7" rx="5"/>
+            <path d="M70 110 l20 10 l-20 10 z" fill="#BE4BFF"/>
+        </g>
+
+        <!-- Card 6: Prints -->
+        <g transform="translate(1100 0)">
+            <rect width="200" height="230" rx="16" fill="#9B59B6"/>
+            <rect x="10" y="40" width="180" height="180" rx="8" fill="rgba(255,255,255,0.2)"/>
+            <svg x="15" y="10" width="24" height="24"><use href="#icon-prints" fill="#FFFFFF"/></svg>
+            <text x="50" y="28" font-size="16" font-weight="600" fill="#FFFFFF">Prints</text>
+            <rect x="50" y="70" width="100" height="120" fill="#FFF" opacity="0.7" rx="5"/>
+            <text x="60" y="130" font-size="14" fill="#9B59B6">Print Shop</text>
+        </g>
+
+        <!-- Card 7: Websites -->
+        <g transform="translate(1320 0)">
+            <rect width="200" height="230" rx="16" fill="#3498DB"/>
+            <rect x="10" y="40" width="180" height="180" rx="8" fill="rgba(255,255,255,0.2)"/>
+            <svg x="15" y="10" width="24" height="24"><use href="#icon-websites" fill="#FFFFFF"/></svg>
+            <text x="50" y="28" font-size="16" font-weight="600" fill="#FFFFFF">Websites</text>
+            <rect x="30" y="70" width="140" height="100" fill="#FFF" opacity="0.7" rx="5"/>
+            <text x="40" y="120" font-size="18" fill="#3498DB">Your Site</text>
+        </g>
+    </g>
+
+    <!-- Right Arrow -->
+    <circle cx="1415" cy="115" r="20" fill="#FFFFFF" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.1))"/>
+    <svg x="1403" y="103" width="24" height="24"><use href="#arrow-right" stroke="#525252"/></svg>
+  </g>
+
+</svg>

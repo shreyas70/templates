@@ -1,0 +1,132 @@
+<svg width="414" height="896" viewBox="0 0 414 896" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'">
+
+  <defs>
+    <!-- Dark Mode Colors -->
+    <color id="iosBlue">#0A84FF</color>
+    <color id="incomingGray">#303030</color>
+    <color id="outgoingText">#FFFFFF</color>
+    <color id="incomingText">#FFFFFF</color>
+    <color id="placeholderGray">#8E8E93</color>
+    <color id="bgColor">#000000</color>
+    <color id="separatorGray">#38383A</color>
+    <color id="iconGray">#8A8A8E</color>
+
+    <!-- Chat Bubble Tail - Incoming -->
+    <path id="tail-in" d="M0,15 C0,15 10,15 10,10 S 10,0 20,0 H0 Z" fill="#303030"/>
+    <!-- Chat Bubble Tail - Outgoing -->
+    <path id="tail-out" d="M20,15 C20,15 10,15 10,10 S 10,0 0,0 H20 Z" fill="#0A84FF"/>
+
+    <!-- Paperclip Icon -->
+    <g id="paperclip-icon" fill="none" stroke="#0A84FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15.7 7.8l-8.4 8.4c-1.6 1.6-4.1 1.6-5.7 0l0 0c-1.6-1.6-1.6-4.1 0-5.7l8.4-8.4c1-1 2.5-1 3.5 0l0 0c1 1 1 2.5 0 3.5l-8.4 8.4c0.3 0.3 0.8 0.3 1.2 0l0 0c0.3-0.3 0.3-0.8 0-1.2l4.2-4.2"/>
+    </g>
+
+    <!-- Send Arrow Icon -->
+    <g id="send-icon" fill="#FFFFFF">
+       <path d="M3.74441 19.1406C3.49634 19.1406 3.25797 19.0764 3.06796 18.9555C2.62878 18.6739 2.48514 18.0977 2.76673 17.6585L5.09794 13.9936C5.19969 13.8369 5.24585 13.6537 5.22848 13.4715L4.96229 10.7889C4.91927 10.3348 5.24585 9.93379 5.69987 9.89077L8.38249 9.62457C8.56468 9.6072 8.74786 9.543 8.9046 9.44125L12.5695 7.11004C13.0086 6.82845 13.5849 6.97209 13.8665 7.41127C14.148 7.85045 14.0044 8.42669 13.5652 8.70828L9.90031 11.0395C9.46113 11.3211 9.1611 11.7994 9.1611 12.3211L9.1611 15.2803C9.1611 15.7344 9.50131 16.1256 9.95533 16.1899L13.1945 16.644C13.6485 16.7082 14.0397 17.0995 14.104 17.5535L14.558 20.7927C14.632 21.3046 14.2505 21.7685 13.7386 21.8425L10.4994 22.2965C10.0454 22.3608 9.65413 21.9695 9.58989 21.5155L9.13587 18.2763C9.1185 18.1486 9.05426 18.0307 8.95251 17.9493L5.66684 15.1727L5.66684 15.1727C5.30871 15.5853 5.36322 16.1979 5.77586 16.556L9.44071 19.7952C9.87989 20.1767 9.82538 20.8536 9.32185 21.1897L4.41885 21.1897L4.42097 19.8875C4.1729 19.0764 3.96139 19.1406 3.74441 19.1406Z" transform="translate(9 6) scale(0.8)"/>
+    </g>
+
+    <!-- Image Preview Pattern -->
+    <pattern id="imagePattern" patternUnits="userSpaceOnUse" width="260" height="180">
+      <image href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYwIiBoZWlnaHQ9IjE4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSIyNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjMkMyQzJDIi8+CiAgICA8Y2lyY2xlIGN4PSI2NSIgY3k9IjQ1IiByPSIyMCIgZmlsbD0iIzRBNEE0QSIvPgogICAgPHBhdGggZD0iTTAgMTMwTDY1IDkwTDEzMCAxMjBMMTk1IDgwTDI2MCAxNDBMMjYwIDE4MEwwIDE4MFoiIGZpbGw9IiM0QTRBNEEiLz4KPC9zdmc+" width="260" height="180"/>
+    </pattern>
+  </defs>
+
+  <!-- iPhone Frame -->
+  <rect width="414" height="896" rx="45" fill="#1C1C1E"/>
+  <rect x="3" y="3" width="408" height="890" rx="42" fill="#000000"/>
+
+  <!-- Notch -->
+  <path d="M132 0 h150 a22 22 0 0 1 22 22 v12 a0 0 0 0 1 0 0 h-194 a0 0 0 0 1 0 0 v-12 a22 22 0 0 1 22 -22 z" fill="#1C1C1E"/>
+
+  <!-- Screen Background -->
+  <rect x="6" y="6" width="402" height="884" rx="40" fill="#000000"/>
+
+  <!-- Status Bar -->
+  <g fill="#FFFFFF" font-size="15" font-weight="600">
+    <text x="54" y="30" text-anchor="middle">9:41</text>
+    <!-- Wifi Icon -->
+    <path d="M305 22.5 a 9 9 0 0 1 18 0 M308 25 a 6 6 0 0 1 12 0 M311 27.5 a 3 3 0 0 1 6 0" stroke="#FFFFFF" stroke-width="1.5" fill="none" />
+    <!-- Battery Icon -->
+    <rect x="335" y="18" width="24" height="11.5" rx="2.5" stroke="#FFFFFF" stroke-width="1" fill="none"/>
+    <rect x="337" y="20" width="18" height="7.5" rx="1" fill="#FFFFFF"/>
+    <rect x="360" y="21.5" width="1.5" height="4" rx="0.8" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Navigation Bar -->
+  <rect y="50" width="414" height="56" fill="#000000"/>
+  <text x="207" y="83" text-anchor="middle" font-size="17" font-weight="600" fill="#FFFFFF">Trial Assistant</text>
+  <line x1="0" y1="106" x2="414" y2="106" stroke="#38383A" stroke-width="0.5"/>
+
+  <!-- Chat Area -->
+  <g id="chat-content" transform="translate(0, 106)">
+
+    <!-- Incoming Message 1 -->
+    <g transform="translate(15 20)">
+      <use xlink:href="#tail-in" transform="translate(0 0)"/>
+      <rect x="10" y="0" width="250" height="60" rx="18" fill="#303030"/>
+      <text x="25" y="23" font-size="16" fill="#FFFFFF">
+        <tspan x="25" dy="0">Hello! I'm your trial assistant.</tspan>
+        <tspan x="25" dy="1.2em">How are you feeling today?</tspan>
+      </text>
+    </g>
+
+    <!-- Outgoing Message 1 -->
+    <g transform="translate(149 100)">
+      <use xlink:href="#tail-out" transform="translate(250 0) scale(-1, 1)"/>
+      <rect x="0" y="0" width="250" height="40" rx="18" fill="#0A84FF"/>
+      <text x="15" y="25" font-size="16" fill="#FFFFFF">Feeling okay, thanks for asking.</text>
+    </g>
+
+    <!-- Incoming Message 2 (Request for Data) -->
+    <g transform="translate(15 160)">
+      <use xlink:href="#tail-in" transform="translate(0 0)"/>
+      <rect x="10" y="0" width="280" height="60" rx="18" fill="#303030"/>
+      <text x="25" y="23" font-size="16" fill="#FFFFFF">
+        <tspan x="25" dy="0">Great to hear. Could you please</tspan>
+        <tspan x="25" dy="1.2em">upload your latest test results?</tspan>
+      </text>
+    </g>
+
+    <!-- Image Upload Preview -->
+    <g transform="translate(119 240)">
+      <use xlink:href="#tail-out" transform="translate(280 0) scale(-1, 1)"/>
+      <rect x="0" y="0" width="280" height="220" rx="18" fill="#0A84FF"/>
+      
+      <!-- Image Preview -->
+      <rect x="10" y="10" width="260" height="180" rx="12" fill="url(#imagePattern)"/>
+      
+      <!-- File Name and Progress -->
+      <text x="15" y="205" font-size="14" fill="#FFFFFF">medical_scan.jpg</text>
+      <rect x="180" y="195" width="90" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+      <rect x="180" y="195" width="70" height="4" rx="2" fill="#FFFFFF"/>
+    </g>
+
+  </g>
+
+  <!-- Input Area -->
+  <g id="input-area" transform="translate(0, 806)">
+    <rect y="0" width="414" height="56" fill="#1C1C1E"/>
+    <line x1="0" y1="0" x2="414" y2="0" stroke="#38383A" stroke-width="0.5"/>
+
+    <!-- Attachment Button -->
+    <g transform="translate(15 16) scale(1.2)">
+       <circle cx="12" cy="12" r="12" fill="none"/>
+       <use xlink:href="#paperclip-icon" x="0" y="0"/>
+    </g>
+
+    <!-- Text Input Field -->
+    <rect x="55" y="10" width="290" height="36" rx="18" fill="#2C2C2E" stroke="#38383A" stroke-width="0.5"/>
+    <text x="68" y="32" font-size="16" fill="#8E8E93">Upload test results or type message...</text>
+
+    <!-- Send Button -->
+    <g transform="translate(355 10)">
+      <circle cx="18" cy="18" r="18" fill="#0A84FF"/>
+      <use xlink:href="#send-icon" x="0" y="0"/>
+    </g>
+  </g>
+
+  <!-- Home Indicator -->
+  <rect x="139" y="875" width="136" height="5" rx="2.5" fill="#FFFFFF"/>
+
+</svg>

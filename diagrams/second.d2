@@ -1,0 +1,26 @@
+browser: Web Browser {
+    shape: rectangle
+    style.fill: "#E3E9FD"
+    label: "Chrome/Firefox/Safari"
+  }
+  
+  server: Web Server {
+    shape: rectangle
+    style.fill: "#EDF0FD"
+    label: "Node.js/Apache/Nginx"
+  }
+  
+  database: Database {
+    shape: cylinder
+    style.fill: "#F7F8FE"
+    label: "MySQL/MongoDB"
+  }
+  
+  browser -> server: HTTP Request {
+    style.stroke-dash: 5
+  }
+  server -> database: Query Data
+  database -> server: Return Results
+  server -> browser: HTTP Response {
+    style.stroke-dash: 5
+  }
