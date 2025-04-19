@@ -4,7 +4,7 @@
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'primaryTextColor': '#333', 'primaryBorderColor': '#666', 'lineColor': '#666', 'secondaryColor': '#f0f0f0', 'tertiaryColor': '#fff' }}}%%
 flowchart TB
     subgraph Planning["🗓️ Planning"]
-        A(["Requirements Gathering"]) --> B(["Feature Prioritization"])
+        A(["Requirements Gathering"]) --> B(["Task Prioritization"])
         B --> C(["Sprint Planning"])
     end
     
