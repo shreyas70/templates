@@ -88,6 +88,9 @@
    ls -la /home/ec2-user/template_fullstack/frontend/build
    sudo chmod -R 755 /home/ec2-user/template_fullstack/frontend/build
 
+  Buy the domain name from Namecheap or Cloudflare
+    ![Buy domain name](namecheap.png)
+
   Create .env in frontend:
   REACT_APP_API_URL=https://modernaipro.com   
    
