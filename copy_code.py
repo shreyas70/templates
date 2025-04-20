@@ -6,17 +6,35 @@ import pyperclip
 # --- Configuration ---
 # Add or remove file extensions you want to include.
 # Use lowercase and include the leading dot.
-# Set to None to attempt reading ALL files (might include binary garbage).
 INCLUDED_EXTENSIONS = {
     '.py', '.txt', '.md', '.json', '.yaml', '.yml', '.html', '.css',
     '.js', '.ts', '.jsx', '.tsx', '.sh', '.bat', '.csv', '.xml',
-
 }
-# Set to None to include all files regardless of extension.
 
 # Maximum file size in bytes to read (e.g., 1MB = 1 * 1024 * 1024)
-# Set to None for no limit (be careful with very large files)
-MAX_FILE_SIZE_BYTES = 1 * 1024 * 1024 # 1 MB limit
+MAX_FILE_SIZE_BYTES = 1 * 1024 * 1024  # 1 MB limit
+
+
+def should_skip_directory(dir_path):
+    """
+    Determines if a directory should be skipped (e.g., hidden directories, node_modules, etc.)
+    
+    Args:
+        dir_path (Path): The directory path to check
+        
+    Returns:
+        bool: True if directory should be skipped, False otherwise
+    """
+    # Skip hidden directories (starting with .)
+    if dir_path.name.startswith('.'):
+        return True
+    
+    # Skip common directories to exclude
+    exclude_dirs = {'node_modules', 'venv', '.git', '__pycache__', 'dist', 'build'}
+    if dir_path.name in exclude_dirs:
+        return True
+    
+    return False
 
 
 def read_files_to_string(folder_path_str, recursive=True, extensions=None, max_size=None):
@@ -38,14 +56,11 @@ def read_files_to_string(folder_path_str, recursive=True, extensions=None, max_s
         str: A formatted string containing filenames and their content,
              or an error message if the folder is invalid or no files are found.
     """
-    folder_path = Path(folder_path_str).resolve() # Use absolute path for clarity
+    folder_path = Path(folder_path_str).resolve()  # Use absolute path for clarity
     output_parts = []
 
     if not folder_path.is_dir():
         return f"Error: Folder not found or is not a directory: {folder_path_str}"
-
-    # Choose the correct glob pattern based on recursion
-    glob_pattern = '**/*' if recursive else '*'
 
     print(f"Scanning folder: {folder_path}", file=sys.stderr)
     if recursive:
@@ -55,22 +70,31 @@ def read_files_to_string(folder_path_str, recursive=True, extensions=None, max_s
     else:
         print("Including all file extensions.", file=sys.stderr)
     if max_size is not None:
-         print(f"Skipping files larger than {max_size / 1024 / 1024:.2f} MB.", file=sys.stderr)
-
+        print(f"Skipping files larger than {max_size / 1024 / 1024:.2f} MB.", file=sys.stderr)
 
     found_files_count = 0
     skipped_extension_count = 0
     skipped_size_count = 0
     skipped_read_error_count = 0
+    skipped_hidden_dir_count = 0
 
-    for item_path in folder_path.glob(glob_pattern):
+    # Use Path.walk() instead of glob to have more control over directory traversal
+    if recursive:
+        items = []
+        for root, dirs, files in folder_path.walk():
+            # Modify dirs in-place to skip directories we don't want to traverse
+            dirs[:] = [d for d in dirs if not should_skip_directory(Path(root) / d)]
+            items.extend([Path(root) / file for file in files])
+    else:
+        items = [item for item in folder_path.iterdir() if item.is_file()]
+
+    for item_path in items:
         if item_path.is_file():
             relative_path = item_path.relative_to(folder_path)
             file_extension = item_path.suffix.lower()
 
             # 1. Filter by extension if specified
             if extensions and file_extension not in extensions:
-                # print(f"Skipping (extension): {relative_path}", file=sys.stderr)
                 skipped_extension_count += 1
                 continue
 
@@ -87,7 +111,7 @@ def read_files_to_string(folder_path_str, recursive=True, extensions=None, max_s
                     # Decide whether to skip or try reading anyway (let's try reading)
 
             # 3. Try reading the file
-            print(f"Processing: {relative_path}", file=sys.stderr) # Progress indicator
+            print(f"Processing: {relative_path}", file=sys.stderr)  # Progress indicator
             header = f"--- File: {relative_path} ---\n"
             footer = f"\n--- End File: {relative_path} ---\n\n"
             content = ""
@@ -101,7 +125,7 @@ def read_files_to_string(folder_path_str, recursive=True, extensions=None, max_s
                 # This usually means it's a binary file or wrong encoding
                 content = f"--- Skipped reading file: Could not decode content (likely binary or wrong encoding) ---"
                 print(f"Skipping (read error - decode): {relative_path}", file=sys.stderr)
-                output_parts.append(header + content + footer) # Include marker even if skipped
+                output_parts.append(header + content + footer)  # Include marker even if skipped
                 skipped_read_error_count += 1
             except PermissionError:
                 content = f"--- Skipped reading file: Permission denied ---"
@@ -115,7 +139,6 @@ def read_files_to_string(folder_path_str, recursive=True, extensions=None, max_s
                 output_parts.append(header + content + footer)
                 skipped_read_error_count += 1
 
-
     # Summary Footer
     summary = (
         f"\n--- Summary ---\n"
@@ -128,18 +151,18 @@ def read_files_to_string(folder_path_str, recursive=True, extensions=None, max_s
     )
     print(summary, file=sys.stderr)
 
-
     if not output_parts:
-         return f"No files matching the criteria were found or could be read in {folder_path_str}."
+        return f"No files matching the criteria were found or could be read in {folder_path_str}."
 
     return "".join(output_parts)
+
 
 def main():
     parser = argparse.ArgumentParser(
         description="""Reads specified text files from a folder (recursively by default)
                     and prints their relative paths and content as a single block
                     of text, suitable for pasting into an LLM chat window.""",
-        formatter_class=argparse.RawTextHelpFormatter # Preserve formatting in help
+        formatter_class=argparse.RawTextHelpFormatter  # Preserve formatting in help
     )
     parser.add_argument(
         "folder_path",
@@ -154,8 +177,8 @@ def main():
     )
     parser.add_argument(
         "-e", "--extensions",
-        nargs='*', # 0 or more arguments
-        default=INCLUDED_EXTENSIONS, # Use the default list from config
+        nargs='*',  # 0 or more arguments
+        default=INCLUDED_EXTENSIONS,  # Use the default list from config
         help=f"""Space-separated list of file extensions to include
 (e.g., .py .txt .md). Remember the leading dot!
 If omitted, defaults to a predefined list: {', '.join(INCLUDED_EXTENSIONS) if INCLUDED_EXTENSIONS else 'None'}.
@@ -171,15 +194,14 @@ Files larger than this will be skipped.
 Default: {MAX_FILE_SIZE_BYTES / (1024 * 1024) if MAX_FILE_SIZE_BYTES else 'None (no limit)'} MB."""
     )
 
-
     args = parser.parse_args()
 
     # Process extensions input
     file_extensions = None
-    if args.extensions is not None: # Check if -e was provided at all
-        if len(args.extensions) == 0: # -e was provided with no arguments
-             print("Extension filter disabled by user request (-e). Attempting to read all files.", file=sys.stderr)
-             file_extensions = None # Explicitly set to None for "all files" logic
+    if args.extensions is not None:  # Check if -e was provided at all
+        if len(args.extensions) == 0:  # -e was provided with no arguments
+            print("Extension filter disabled by user request (-e). Attempting to read all files.", file=sys.stderr)
+            file_extensions = None  # Explicitly set to None for "all files" logic
         else:
             # Normalize: lowercase and ensure leading dot
             file_extensions = {
@@ -192,9 +214,8 @@ Default: {MAX_FILE_SIZE_BYTES / (1024 * 1024) if MAX_FILE_SIZE_BYTES else 'None 
     if args.max_size_mb is not None:
         max_size_bytes = int(args.max_size_mb * 1024 * 1024)
         if max_size_bytes < 0:
-             print("Warning: --max-size-mb cannot be negative. Ignoring size limit.", file=sys.stderr)
-             max_size_bytes = None
-
+            print("Warning: --max-size-mb cannot be negative. Ignoring size limit.", file=sys.stderr)
+            max_size_bytes = None
 
     result_string = read_files_to_string(
         args.folder_path,
@@ -203,7 +224,14 @@ Default: {MAX_FILE_SIZE_BYTES / (1024 * 1024) if MAX_FILE_SIZE_BYTES else 'None 
         max_size=max_size_bytes
     )
 
-    pyperclip.copy(result_string)
+    # Copy result to clipboard if pyperclip is available
+    try:
+        pyperclip.copy(result_string)
+        print(">>> Result copied to clipboard. <<<", file=sys.stderr)
+    except Exception as e:
+        print(f">>> Warning: Could not copy to clipboard: {e} <<<", file=sys.stderr)
+        print(">>> Please manually copy the text from the console. <<<", file=sys.stderr)
+
     # Print the final result to standard output
     # Add clear markers for easy copying
     print("\n" + "="*20 + " START OF CONSOLIDATED FILES " + "="*20)
