@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Habit Tracker - Project Overview</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section>
+                <h1>Habit Tracker</h1>
+                <h3>A Simple Habit Tracking Application</h3>
+                <p>Demo Project</p>
+            </section>
+            
+            <!-- Agenda -->
+            <section>
+                <h2>Agenda</h2>
+                <ul>
+                    <li>Project Overview</li>
+                    <li>Architecture</li>
+                    <li>Features</li>
+                    <li>Demo</li>
+                    <li>Q&A</li>
+                </ul>
+            </section>
+            
+            <!-- Project Overview -->
+            <section>
+                <h2>Project Overview</h2>
+                <p>The Habit Tracker is a simple application designed to help users build and maintain positive habits by tracking their daily activities.</p>
+                <ul>
+                    <li>Create and track habits</li>
+                    <li>Mark habits as complete each day</li>
+                    <li>View progress over time</li>
+                    <li>No account required</li>
+                </ul>
+            </section>
+            
+            <!-- Architecture Diagram -->
+            <section>
+                <h2>System Architecture</h2>
+                <div class="mermaid">
+                    %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f5f5f5', 'primaryTextColor': '#333', 'primaryBorderColor': '#666', 'lineColor': '#666', 'secondaryColor': '#f0f0f0', 'tertiaryColor': '#fff' }}}%%
+                    flowchart TB
+                        subgraph Frontend["Frontend (Reveal.js)"]
+                            UI["User Interface"]
+                            API_Client["API Client"]
+                        end
+                        
+                        subgraph Backend["Backend (FastAPI)"]
+                            API["REST API"]
+                            Service["Habit Service"]
+                            Store["In-Memory Store"]
+                        end
+                        
+                        UI --> API_Client
+                        API_Client --> API
+                        API --> Service
+                        Service --> Store
+                        
+                        classDef frontend fill:#a8dadc80,stroke:#457b9d,stroke-width:1px,color:#1d3557,font-family:Arial
+                        classDef backend fill:#e9c46a80,stroke:#f4a261,stroke-width:1px,color:#264653,font-family:Arial
+                        
+                        class UI,API_Client frontend
+                        class API,Service,Store backend
+                </div>
+            </section>
+            
+            <!-- Features -->
+            <section>
+                <h2>Features</h2>
+                <ul>
+                    <li>Create new habits with name and description</li>
+                    <li>Mark habits as complete for specific dates</li>
+                    <li>View habit completion history</li>
+                    <li>Track habit streaks</li>
+                    <li>Simple, intuitive UI</li>
+                </ul>
+            </section>
+            
+            <!-- Tech Stack -->
+            <section>
+                <h2>Tech Stack</h2>
+                <div class="two-columns">
+                    <div>
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>FastAPI</li>
+                            <li>In-memory storage</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>JavaScript</li>
+                            <li>Reveal.js</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Demo -->
+            <section>
+                <h2>Demo</h2>
+                <p>Let's see the Habit Tracker in action!</p>
+                <div class="demo-link">
+                    <a href="../frontend/index.html" target="_blank">Launch Demo</a>
+                </div>
+            </section>
+            
+            <!-- Q&A -->
+            <section>
+                <h2>Questions?</h2>
+                <p>Thank you for your attention!</p>
+            </section>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            plugins: []
+        });
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>

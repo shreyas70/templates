@@ -1,0 +1,44 @@
+.reveal {
+    font-family: Arial, sans-serif;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+    color: #333;
+}
+
+.reveal .slides section .mermaid {
+    margin: 2em 0;
+}
+
+.reveal .slides section .diagram-container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.two-columns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.two-columns > div {
+    flex: 1;
+    padding: 0 1em;
+}
+
+.demo-link {
+    margin-top: 2em;
+}
+
+.demo-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.demo-link a:hover {
+    background-color: #45a049;
+}
