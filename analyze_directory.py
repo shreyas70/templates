@@ -13,7 +13,7 @@ DEFAULT_EXCLUDED_DIRS = {
     ".env", # Often contains secrets, might want to include with -i .env if needed
     "dist", "build", "out", "target", "*.egg-info", ".vscode", ".idea",
     "vendor", "site-packages", ".terraform", ".serverless", "coverage",
-    "logs", "temp", "tmp",
+    "logs", "temp", "tmp",".ruff_cache"
     # Add any other project-specific build/dependency directories
 }
 
