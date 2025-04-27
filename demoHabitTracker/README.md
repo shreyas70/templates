@@ -59,13 +59,22 @@ pip install fastapi uvicorn pytest httpx
 1. Start the backend server:
 
 ```bash
-cd demoHabitTracker
+# Run from the parent directory of demoHabitTracker
+python -m demoHabitTracker.backend.main
+```
+
+Or, if you've modified the imports to use absolute imports:
+
+```bash
+# Run from inside the demoHabitTracker directory
 python backend/main.py
 ```
 
 2. Open the frontend in your web browser:
    - Navigate to `demoHabitTracker/frontend/index.html` in your file explorer and open it with your browser
    - Or use a simple HTTP server: `python -m http.server` and navigate to `http://localhost:8000/frontend/index.html`
+
+For detailed instructions and troubleshooting, see the [How to Run](docs/how-to-run.md) guide.
 
 ### Running Tests
 
@@ -83,6 +92,7 @@ For more detailed information about the project, check out the documentation in 
 - [Tech Stack](docs/architecture/tech-stack.md)
 - [Current State](docs/state/current-state.md)
 - [Roadmap](docs/roadmap/milestones.md)
+- [How to Run](docs/how-to-run.md)
 
 ## Presentation
 
