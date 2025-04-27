@@ -1,0 +1,48 @@
+fastapi: FastAPI {
+    shape: rectangle
+    style.fill: "#E3E9FD"
+    label: "FastAPI Application"
+  }
+  
+  tasks: Task Processor {
+    shape: rectangle
+    style.fill: "#EDF0FD"
+    label: "Task Processor"
+  }
+  
+  celery: Celery {
+    shape: rectangle
+    style.fill: "#F7F8FE"
+    label: "Celery Worker"
+  }
+  
+  redis: Redis {
+    shape: cylinder
+    style.fill: "#F0F7FF"
+    label: "Redis Message Broker"
+  }
+  
+  fastapi -> tasks: Create Tasks {
+    style.stroke-dash: 5
+  }
+  
+  tasks -> fastapi: Return Status {
+    style.stroke-dash: 5
+  }
+  
+  tasks -> celery: Submit Async Jobs
+  celery -> redis: Process Queued Jobs
+  redis -> celery: Store Results
+  celery -> tasks: Return Results
+  
+  kapi: {
+    shape: rectangle
+    style.fill: "#F5F5F5"
+    style.stroke: "#2196F3"
+    style.stroke-width: 2
+    style.stroke-dash: 3
+    label: "KAPI Application"
+    
+    fastapi
+    tasks
+  }

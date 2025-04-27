@@ -1,0 +1,101 @@
+timeframe: 24 Hours {
+    shape: rectangle
+    style.fill: "#2C3E50"
+    style.stroke: "#E74C3C"
+    style.stroke-width: 3
+    style.font-color: "#E74C3C"
+    style.font-size: 20
+    style.bold: true
+  }
+  
+  slides: Slides/MKT {
+    shape: document
+    style.fill: "#E8F4FD"
+    style.stroke: "#3498DB"
+    style.stroke-width: 2
+    style.font-color: "#2C3E50"
+    style.font-size: 16
+  }
+  
+  diagram: Diagram {
+    shape: rectangle
+    style.fill: "#F0F7FD"
+    style.stroke: "#3498DB"
+    style.stroke-width: 2
+    style.font-color: "#2C3E50"
+    style.font-size: 16
+  }
+  
+  landingpage: Landing Page {
+    shape: rectangle
+    style.fill: "#ECF5E6"
+    style.stroke: "#27AE60"
+    style.stroke-width: 2
+    style.font-color: "#2C3E50"
+    style.font-size: 16
+  }
+  
+  testcases: Test Cases {
+    shape: rectangle
+    style.fill: "#FDF5E6"
+    style.stroke: "#F39C12"
+    style.stroke-width: 2
+    style.font-color: "#2C3E50"
+    style.font-size: 16
+  }
+  
+  product: Product {
+    shape: rectangle
+    style.fill: "#FDECEF"
+    style.stroke: "#E74C3C"
+    style.stroke-width: 2
+    style.font-color: "#2C3E50"
+    style.font-size: 16
+  }
+  
+  deployment: Deployment {
+    shape: hexagon
+    style.fill: "#E8F6F3"
+    style.stroke: "#16A085"
+    style.stroke-width: 2
+    style.font-color: "#2C3E50"
+    style.font-size: 16
+  }
+  
+  timeframe -> slides: Start {
+    style.stroke: "#E74C3C"
+    style.stroke-width: 2
+    style.font-color: "#E74C3C"
+  }
+  
+  slides -> diagram: Hour 3 {
+    style.stroke: "#3498DB"
+    style.stroke-width: 2
+    style.font-color: "#3498DB"
+  }
+  
+  diagram -> landingpage: Hour 6 {
+    style.stroke: "#3498DB"
+    style.stroke-width: 2
+    style.font-color: "#3498DB"
+  }
+  
+  landingpage -> testcases: Hour 9 {
+    style.stroke: "#27AE60"
+    style.stroke-width: 2
+    style.font-color: "#27AE60"
+  }
+  
+  testcases -> product: Hour 15 {
+    style.stroke: "#F39C12"
+    style.stroke-width: 2
+    style.font-color: "#F39C12"
+  }
+  
+  product -> deployment: Hour 24 {
+    style.stroke: "#E74C3C"
+    style.stroke-width: 2
+    style.font-color: "#E74C3C"
+  }
+  
+  direction: down

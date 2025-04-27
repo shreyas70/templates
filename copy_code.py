@@ -8,7 +8,7 @@ DEFAULT_EXCLUDED_DIRS = {
     "node_modules", ".git", ".svn", "__pycache__", "venv", ".venv", "env",
     ".env", "dist", "build", "out", "target", "*.egg-info", ".vscode", ".idea",
     "vendor", "site-packages", ".terraform", ".serverless", "coverage",
-    "logs", "temp", "tmp",".ruff_cache",".pytest_cache","__mocks__"
+    "logs", "temp", "tmp",".ruff_cache",".pytest_cache","__mocks__", "docs", "web"
 }
 
 EXCLUDED_EXTENSIONS = {
